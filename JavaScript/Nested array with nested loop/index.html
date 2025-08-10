@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nested array with nested loop</h1>
+    <script>
+
+        let Arr = [14,34,57,35,7,62,4];
+        Arr[1]
+
+        let mtr = [[1,2,3],[4,5,6],[7,8,9]];
+        mtr[0][0] = "car";
+
+        console.log(mtr[0][0]);
+        console.log(mtr[0][1]);
+        console.log(mtr[0][2]);
+
+        console.log(mtr[1][0]);
+        console.log(mtr[1][1]);
+        console.log(mtr[1][2]);
+
+        console.log(mtr[2][0]);
+        console.log(mtr[2][1]);
+        console.log(mtr[2][2]);
+
+        for(let i = 0; i < mtr.length; i++)
+            {
+                for(let l = 0; l < mtr[i].length; l++)
+                    {
+                        console.log("mtr[i][l]: ", mtr[i][l]);
+                        mtr[i][l] = mtr[i][l] * 2;
+                    }
+            }
+        console.log(mtr);
+    </script>
+
+</body>
+</html>

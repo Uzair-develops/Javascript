@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Input, output and math expressions and operators</h1>
+<body>
+    <h3>Percentage calculator</h3>
+    <form onsubmit="calculate() ; return false;">
+
+        <label for="Totalmarks">Total Marks</label>
+        <input type="number" min="1"  required id="Totalmarks" placeholder="Enter Total marks">
+        <br>
+
+        <label for="Obtainmarks">Obtained Marks</label>
+        <input type="number" min="1"  required id="Obtainmarks" placeholder="Enter Obatined Marks">
+        <br>
+
+        <button type="submit">Calculate</button>
+
+    </form>
+
+    <h1 id="result"></h1>
+
+
+    <script>
+        function calculate()
+        {
+
+            let Totalmarks = document.querySelector("#Totalmarks").value;
+            let Obtainmarks = document.querySelector("#Obtainmarks").value;
+
+            Totalmarks = Number(Totalmarks)
+            Obtainmarks = Number(Obatinmarks)
+
+            let result = Obtainmarks * 100 / Totalmarks;
+
+            document.querySelector("#result").innerHTML = `You have got ${result}%`;
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>

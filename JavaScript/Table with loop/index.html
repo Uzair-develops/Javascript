@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Table</h1>
+
+    <form onsubmit="NumInp(); return false">
+        <label for="Inputnum">Enter a Number of which you want to print table:</label>
+        <br>
+        <input type="number" id="Inputnum" name="Inputnum">
+        <br>
+        <button type="submit"> Submit</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function NumInp()
+        {
+            let input = +document.getElementById('Inputnum').value;
+
+            document.querySelector("#result").innerHTML = ""
+
+            for (let i = 0; i < 10; i++)
+                {
+                    document.querySelector("#result").innerHTML += `<h3> ${input} x ${i+1} = ${ input * (i+1)}</h3>`;
+
+                }
+
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

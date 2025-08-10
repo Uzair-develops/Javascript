@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Logical Operators</h1>
+    <script>
+
+         // Truth Table logical AND operator
+        // ================================
+        // true && true = true 
+        // true && false = false
+        // false && true = false
+        // false && false = false
+
+
+        // Truth table logical OR operator
+        // ================================
+        // true || true = true
+        // true || false = true
+        // false || true = true
+        // false || false = false
+
+        // truth table of logical NOT operator
+        // ================================
+        // !true = false
+        // !false = true
+       
+
+        // for example lets have a condition based on AND operator & OR operator
+
+        let age = +prompt("Enter your age");
+        let Educationyear = +prompt("Enter your Year of Education:");
+        let city = prompt("Enter your city:");
+
+        if (
+            (age < 18 && Educationyear >= 10)
+            ||
+            (age < 26  && Educationyear >= 16)
+            &&
+            city === "karachi"
+        ) {
+            console.log("eligible");
+        } 
+
+
+    </script>
+</body>
+</html>

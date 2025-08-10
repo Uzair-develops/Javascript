@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Switch case</h1>
+<body>
+    
+    <script>
+        let marks = 80;
+        let res = "";
+
+        switch (true) 
+        {
+            case marks >= 80:
+                res = "A+ Grade"
+                break;
+
+            case marks < 80 && marks >70:
+                res = "A Grade"
+                break
+
+            default:
+                break;
+
+        }
+
+        alert("result: " + res);
+        console.log("result: " + res);
+    </script>
+
+</body>
+</html>

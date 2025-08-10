@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Condition Checking Copy</h1>
+    <h3>Temprature App</h3>
+
+    <form onsubmit="conditioncheck(); return false">
+        <label for="temp">Temprature:</label>
+        <input type="number" id="temp">
+
+        <input type="submit" value="Check">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function conditioncheck()
+        {
+            let temp = +document.querySelector("#temp").value;
+
+            if (temp > 30)
+                {
+                    document.querySelector("#result").innerHTML = "its too hot!";
+                } 
+                else if (temp > 25)
+                {
+                    document.querySelector("#result").innerHTML = "its pleasent outside";
+                }
+                else if (temp > 10)
+                {
+                    document.querySelector("#result").innerHTML = "its cold outside";
+                }
+                else 
+                {
+                    document.querySelector("#result").innerHTML = "Freezing";
+                }
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

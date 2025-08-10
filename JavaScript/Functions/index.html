@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        function sumtwonum(n1, n2)
+            {
+                console.log("Sum Function Running now:");
+
+                let res = n1+n2;
+
+                return res;
+            }
+
+        let returnvalue = sumtwonum(2, 4);
+
+            console.log("Return: ", returnvalue)
+
+
+
+            function square(num)
+                {
+                    return num * num;
+                }
+
+            function cube(num)
+                {
+                    return num*num*num;
+                }
+
+            function pow(num, power)
+                {
+                    let result = num;
+
+                    for(let i = 0; i < power; i++)
+                        {
+                            result = result * num;
+                        }
+                    return result;
+                }
+
+            console.log("Square Function of value 3 :",square(3));
+            console.log("Cube function of value 2 :", cube(2));
+            console.log("Power function of 2 whose power is 4 :", pow(2, 4));
+
+    </script>
+
+
+
+</body>
+</html>

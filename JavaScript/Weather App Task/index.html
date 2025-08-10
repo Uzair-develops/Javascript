@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+<h1 id="ab">Weather forecast</h1>
+<form onsubmit="getweather() ; return false;">
+    <label for="City"> Enter City:</label>
+    <input type="text" id="City" name="city" required>
+    <button type="submit">Get Weather</button>
+</form>
+
+
+<script>
+ function getweather() {
+    const city = document.getElementById('City').value;
+    alert(`Fetching Weather for ${city}...`);
+
+    //Fectch API data and also install/add CDN from AXIOS ny scrolling down in Introduction page and add in head tag section
+
+
+    axios.get(`https://api.weatherapi.com/v1/current.json?key=e22d2c1a2c5f4bb8a2962026250208&q=${city}&aqi=yes`)
+  .then(function (response) {
+    // handle success
+    console.log(response);
+    console.log(response.data);
+    console.log(response.data.current);
+    console.log(response.data.current.temp_c);
+
+    document.getElementById('ab').innerHTML = `<h2>Weather in ${city}</h2>
+    <p> Temprature: ${response.data.current.temp_c} C</p>`
+
+
+
+
+
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
+
+
+
+ }
+</script>
+
+</body>
+</html>
+
